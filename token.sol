@@ -66,6 +66,11 @@ contract PACEToken is ERC20Interface, SafeMath {
         balances[0xb00f263cb151F3853B36F9A3Cb9C04092aF1De0f] = _totalSupply;
         emit Transfer(address(0), 0xb00f263cb151F3853B36F9A3Cb9C04092aF1De0f, _totalSupply);
     }
+
+    function name() public view returns (string)
+    function symbol() public view returns (string)
+    function decimals() public view returns (uint8)
+    function totalSupply() public view returns (uint256)
  
     function totalSupply() public constant returns (uint) {
         return _totalSupply  - balances[address(0)];
